@@ -6,11 +6,11 @@ import DataTable from "../components/Table";
 import { Item } from 'devextreme-react/form';
 import { Form } from 'devextreme-react/data-grid';
 import requests from '../agent';
-const page = "/Invoice_States/";
+const page = "/BankBranches/";
 
-const columns = ['id','state'];
+const columns = ['id','branchCode','branchName','countryCode','bankCode','contactDetails','postalAddress','physicalAddress','remarks'];
 
-const InvoiceStates = () => {
+const BankBranch = () => {
     const [data, setData] = useState([]);
     useEffect(() => {
         requests.get(page).then(response => {
@@ -29,16 +29,23 @@ const InvoiceStates = () => {
     }
 
     return (
-        <Content Page="Invoice States">
+        <Content Page="Bank Branches">
             <DataTable columns={columns} dataSource={data}
-                title="Invoice States"
+                title="Bank Branch"
                 handlesave={handleSave}
                 handleDelete={handleDelete}
                 handleUpdate={handleUpdate}
                 width={800}
                 height={550} >
                 <Form colCount={2}>
-                             <Item dataField="state" />                   
+                             <Item dataField="branchCode" />                   
+	                            <Item dataField="branchName" />                   
+	                            <Item dataField="countryCode" />                   
+	                            <Item dataField="bankCode" />                   
+	                            <Item dataField="contactDetails" />                   
+	                            <Item dataField="postalAddress" />                   
+	                            <Item dataField="physicalAddress" />                   
+	                            <Item dataField="remarks" />                   
 	                                   
                 </Form>
             </DataTable>
@@ -47,5 +54,5 @@ const InvoiceStates = () => {
     );
 }
 
-export default InvoiceStates;
+export default BankBranch;
 

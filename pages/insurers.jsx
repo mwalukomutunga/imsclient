@@ -6,9 +6,9 @@ import DataTable from "../components/Table";
 import { Item } from 'devextreme-react/form';
 import { Form } from 'devextreme-react/data-grid';
 import requests from '../agent';
-const page = "/Insurers";
+const page = "/Insurers/";
 
-const columns = ['id','jurisdictionID','tradingName','registrationNo','tAXRegistrationNo','registrationNoText','postalAddress','city','postalCode','telephone','contactPersonName','contactPersonPosition','email','bankName','bankLocationCountry','bankBranchCode','bankAccountName','bankAccountNo','bankCity','insurerStatus','firstActivated','active','version','versionUpdated','archivePolicyID','logoFileName'];
+const columns = ['id','jurisdictionId','tradingName','registrationNo','tAXRegistrationNo','registrationNoText','postalAddress','city','postalCode','telephone','contactPersonName','contactPersonPosition','email','bankAccountId','insurerStatus','firstActivated','active','version','versionUpdated','archivePolicyID','logoFileName'];
 
 const Insurer = () => {
     const [data, setData] = useState([]);
@@ -38,31 +38,26 @@ const Insurer = () => {
                 width={800}
                 height={550} >
                 <Form colCount={2}>
-                             <Item dataField="JurisdictionID" />                   
-	                            <Item dataField="TradingName" />                   
-	                            <Item dataField="RegistrationNo" />                   
-	                            <Item dataField="TAXRegistrationNo" />                   
-	                            <Item dataField="RegistrationNoText" />                   
-	                            <Item dataField="PostalAddress" />                   
-	                            <Item dataField="City" />                   
-	                            <Item dataField="PostalCode" />                   
-	                            <Item dataField="Telephone" />                   
-	                            <Item dataField="ContactPersonName" />                   
-	                            <Item dataField="ContactPersonPosition" />                   
-	                            <Item dataField="Email" />                   
-	                            <Item dataField="BankName" />                   
-	                            <Item dataField="BankLocationCountry" />                   
-	                            <Item dataField="BankBranchCode" />                   
-	                            <Item dataField="BankAccountName" />                   
-	                            <Item dataField="BankAccountNo" />                   
-	                            <Item dataField="BankCity" />                   
-	                            <Item dataField="InsurerStatus" />                   
-	                            <Item dataField="FirstActivated" />                   
-	                            <Item dataField="Active" />                   
-	                            <Item dataField="Version" />                   
-	                            <Item dataField="VersionUpdated" />                   
-	                            <Item dataField="ArchivePolicyID" />                   
-	                            <Item dataField="LogoFileName" />                   
+                             <Item dataField="jurisdictionId" />                   
+	                            <Item dataField="tradingName" />                   
+	                            <Item dataField="registrationNo" />                   
+	                            <Item dataField="tAXRegistrationNo" />                   
+	                            <Item dataField="registrationNoText" />                   
+	                            <Item dataField="postalAddress" />                   
+	                            <Item dataField="city" />                   
+	                            <Item dataField="postalCode" />                   
+	                            <Item dataField="telephone" />                   
+	                            <Item dataField="contactPersonName" />                   
+	                            <Item dataField="contactPersonPosition" />                   
+	                            <Item dataField="email" />                   
+	                            <Item dataField="bankAccountId" />                   
+	                            <Item dataField="insurerStatus" />                   
+	                            <Item dataField="firstActivated" />                   
+	                            <Item dataField="active" />                   
+	                            <Item dataField="version" />                   
+	                            <Item dataField="versionUpdated" />                   
+	                            <Item dataField="archivePolicyID" />                   
+	                            <Item dataField="logoFileName" />                   
 	                                   
                 </Form>
             </DataTable>

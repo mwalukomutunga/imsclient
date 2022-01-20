@@ -6,9 +6,9 @@ import DataTable from "../components/Table";
 import { Item } from 'devextreme-react/form';
 import { Form } from 'devextreme-react/data-grid';
 import requests from '../agent';
-const page = "/ReTros";
+const page = "/ReTros/";
 
-const columns = ['id','insurerID','reInsurerID','reInsurerQuotaShare','effectiveFrom','effectiveTo','payInsurerComm'];
+const columns = ['id','insurerId','reInsurerId','reInsurerQuotaShare','effectiveFrom','effectiveTo','payInsurerComm'];
 
 const ReTro = () => {
     const [data, setData] = useState([]);
@@ -38,12 +38,12 @@ const ReTro = () => {
                 width={800}
                 height={550} >
                 <Form colCount={2}>
-                             <Item dataField="InsurerID" />                   
-	                            <Item dataField="ReInsurerID" />                   
-	                            <Item dataField="ReInsurerQuotaShare" />                   
-	                            <Item dataField="EffectiveFrom" />                   
-	                            <Item dataField="EffectiveTo" />                   
-	                            <Item dataField="PayInsurerComm" />                   
+                             <Item dataField="insurerId" />                   
+	                            <Item dataField="reInsurerId" />                   
+	                            <Item dataField="reInsurerQuotaShare" />                   
+	                            <Item dataField="effectiveFrom" />                   
+	                            <Item dataField="effectiveTo" />                   
+	                            <Item dataField="payInsurerComm" />                   
 	                                   
                 </Form>
             </DataTable>

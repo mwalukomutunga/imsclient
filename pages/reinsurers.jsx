@@ -6,9 +6,9 @@ import DataTable from "../components/Table";
 import { Item } from 'devextreme-react/form';
 import { Form } from 'devextreme-react/data-grid';
 import requests from '../agent';
-const page = "/ReInsurers";
+const page = "/ReInsurers/";
 
-const columns = ['id','jurisdictionID','tradingName','registrationNo','localTaxRefNo','postalAddress','boxNumber','city','areaCode','contactPerson','contactPersonPosition','contactPhone','fax','cell','email','bankName','bankLocationCountry','bankCity','bankBranchCode','bankAccountName','bankAccountNo','statusID','active','version','versionUpdated','archivePolicyID','effectiveFrom','effectiveTo'];
+const columns = ['id','jurisdictionId','tradingName','registrationNo','localTaxRefNo','postalAddress','boxNumber','city','areaCode','contactPerson','contactPersonPosition','contactPhone','fax','cell','email','bankAccountId','statusId','active','version','versionUpdated','archivePolicyID','effectiveFrom','effectiveTo'];
 
 const ReInsurer = () => {
     const [data, setData] = useState([]);
@@ -38,33 +38,28 @@ const ReInsurer = () => {
                 width={800}
                 height={550} >
                 <Form colCount={2}>
-                             <Item dataField="JurisdictionID" />                   
-	                            <Item dataField="TradingName" />                   
-	                            <Item dataField="RegistrationNo" />                   
-	                            <Item dataField="LocalTaxRefNo" />                   
-	                            <Item dataField="PostalAddress" />                   
-	                            <Item dataField="BoxNumber" />                   
-	                            <Item dataField="City" />                   
-	                            <Item dataField="AreaCode" />                   
-	                            <Item dataField="ContactPerson" />                   
-	                            <Item dataField="ContactPersonPosition" />                   
-	                            <Item dataField="ContactPhone" />                   
-	                            <Item dataField="Fax" />                   
-	                            <Item dataField="Cell" />                   
-	                            <Item dataField="Email" />                   
-	                            <Item dataField="BankName" />                   
-	                            <Item dataField="BankLocationCountry" />                   
-	                            <Item dataField="BankCity" />                   
-	                            <Item dataField="BankBranchCode" />                   
-	                            <Item dataField="BankAccountName" />                   
-	                            <Item dataField="BankAccountNo" />                   
-	                            <Item dataField="StatusID" />                   
-	                            <Item dataField="Active" />                   
-	                            <Item dataField="Version" />                   
-	                            <Item dataField="VersionUpdated" />                   
-	                            <Item dataField="ArchivePolicyID" />                   
-	                            <Item dataField="EffectiveFrom" />                   
-	                            <Item dataField="EffectiveTo" />                   
+                             <Item dataField="jurisdictionId" />                   
+	                            <Item dataField="tradingName" />                   
+	                            <Item dataField="registrationNo" />                   
+	                            <Item dataField="localTaxRefNo" />                   
+	                            <Item dataField="postalAddress" />                   
+	                            <Item dataField="boxNumber" />                   
+	                            <Item dataField="city" />                   
+	                            <Item dataField="areaCode" />                   
+	                            <Item dataField="contactPerson" />                   
+	                            <Item dataField="contactPersonPosition" />                   
+	                            <Item dataField="contactPhone" />                   
+	                            <Item dataField="fax" />                   
+	                            <Item dataField="cell" />                   
+	                            <Item dataField="email" />                   
+	                            <Item dataField="bankAccountId" />                   
+	                            <Item dataField="statusId" />                   
+	                            <Item dataField="active" />                   
+	                            <Item dataField="version" />                   
+	                            <Item dataField="versionUpdated" />                   
+	                            <Item dataField="archivePolicyID" />                   
+	                            <Item dataField="effectiveFrom" />                   
+	                            <Item dataField="effectiveTo" />                   
 	                                   
                 </Form>
             </DataTable>

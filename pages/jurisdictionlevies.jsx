@@ -6,9 +6,9 @@ import DataTable from "../components/Table";
 import { Item } from 'devextreme-react/form';
 import { Form } from 'devextreme-react/data-grid';
 import requests from '../agent';
-const page = "/JurisdictionLevies";
+const page = "/JurisdictionLevies/";
 
-const columns = ['id','jursidictionID','levyName','levyPayee','percentageLevy','levyAmount','bankName','bankLocationCountry','bankBranchCode','bankAccountName','bankAccountNo','city','active','version','versionUpdated','archivePolicyID','effectiveFrom','effectiveTo','excludedInPremium','showOnInvoice'];
+const columns = ['id','jurisdictionId','levyName','levyPayee','percentageLevy','levyAmount','bankAccountId','active','version','versionUpdated','archivePolicyID','effectiveFrom','effectiveTo','excludedInPremium','showOnInvoice'];
 
 const JurisdictionLevy = () => {
     const [data, setData] = useState([]);
@@ -38,25 +38,20 @@ const JurisdictionLevy = () => {
                 width={800}
                 height={550} >
                 <Form colCount={2}>
-                             <Item dataField="JursidictionID" />                   
-	                            <Item dataField="LevyName" />                   
-	                            <Item dataField="LevyPayee" />                   
-	                            <Item dataField="PercentageLevy" />                   
-	                            <Item dataField="LevyAmount" />                   
-	                            <Item dataField="BankName" />                   
-	                            <Item dataField="BankLocationCountry" />                   
-	                            <Item dataField="BankBranchCode" />                   
-	                            <Item dataField="BankAccountName" />                   
-	                            <Item dataField="BankAccountNo" />                   
-	                            <Item dataField="City" />                   
-	                            <Item dataField="Active" />                   
-	                            <Item dataField="Version" />                   
-	                            <Item dataField="VersionUpdated" />                   
-	                            <Item dataField="ArchivePolicyID" />                   
-	                            <Item dataField="EffectiveFrom" />                   
-	                            <Item dataField="EffectiveTo" />                   
-	                            <Item dataField="ExcludedInPremium" />                   
-	                            <Item dataField="ShowOnInvoice" />                   
+                             <Item dataField="jurisdictionId" />                   
+	                            <Item dataField="levyName" />                   
+	                            <Item dataField="levyPayee" />                   
+	                            <Item dataField="percentageLevy" />                   
+	                            <Item dataField="levyAmount" />                   
+	                            <Item dataField="bankAccountId" />                   
+	                            <Item dataField="active" />                   
+	                            <Item dataField="version" />                   
+	                            <Item dataField="versionUpdated" />                   
+	                            <Item dataField="archivePolicyID" />                   
+	                            <Item dataField="effectiveFrom" />                   
+	                            <Item dataField="effectiveTo" />                   
+	                            <Item dataField="excludedInPremium" />                   
+	                            <Item dataField="showOnInvoice" />                   
 	                                   
                 </Form>
             </DataTable>

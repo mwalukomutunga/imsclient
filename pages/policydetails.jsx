@@ -6,7 +6,7 @@ import DataTable from "../components/Table";
 import { Item } from 'devextreme-react/form';
 import { Form } from 'devextreme-react/data-grid';
 import requests from '../agent';
-const page = "/PolicyDetails";
+const page = "/PolicyDetails/";
 
 const columns = ['id','policyID','policyName','businessCategory','insurerId','branchId','productID','accountingMethod','policyFrequency','registrationDate','isActive','brokerComm','firstTimeBuyer','brokerCommissionIncl','offRiskDate','openCover','reference','premiumReceived','coverAdjusted','borderauxExRate','lapseDate','coverRenewalDate','annualPremium','potentialCoverAmount','cumulativeCoverAmount'];
 
@@ -38,30 +38,30 @@ const PolicyDetails = () => {
                 width={800}
                 height={550} >
                 <Form colCount={2}>
-                             <Item dataField="PolicyID" />                   
-	                            <Item dataField="PolicyName" />                   
-	                            <Item dataField="BusinessCategory" />                   
-	                            <Item dataField="InsurerId" />                   
-	                            <Item dataField="BranchId" />                   
-	                            <Item dataField="ProductID" />                   
-	                            <Item dataField="AccountingMethod" />                   
-	                            <Item dataField="PolicyFrequency" />                   
-	                            <Item dataField="RegistrationDate" />                   
-	                            <Item dataField="IsActive" />                   
-	                            <Item dataField="BrokerComm" />                   
-	                            <Item dataField="FirstTimeBuyer" />                   
-	                            <Item dataField="BrokerCommissionIncl" />                   
-	                            <Item dataField="OffRiskDate" />                   
-	                            <Item dataField="OpenCover" />                   
-	                            <Item dataField="Reference" />                   
-	                            <Item dataField="PremiumReceived" />                   
-	                            <Item dataField="CoverAdjusted" />                   
-	                            <Item dataField="BorderauxExRate" />                   
-	                            <Item dataField="LapseDate" />                   
-	                            <Item dataField="CoverRenewalDate" />                   
-	                            <Item dataField="AnnualPremium" />                   
-	                            <Item dataField="PotentialCoverAmount" />                   
-	                            <Item dataField="CumulativeCoverAmount" />                   
+                             <Item dataField="policyID" />                   
+	                            <Item dataField="policyName" />                   
+	                            <Item dataField="businessCategory" />                   
+	                            <Item dataField="insurerId" />                   
+	                            <Item dataField="branchId" />                   
+	                            <Item dataField="productID" />                   
+	                            <Item dataField="accountingMethod" />                   
+	                            <Item dataField="policyFrequency" />                   
+	                            <Item dataField="registrationDate" />                   
+	                            <Item dataField="isActive" />                   
+	                            <Item dataField="brokerComm" />                   
+	                            <Item dataField="firstTimeBuyer" />                   
+	                            <Item dataField="brokerCommissionIncl" />                   
+	                            <Item dataField="offRiskDate" />                   
+	                            <Item dataField="openCover" />                   
+	                            <Item dataField="reference" />                   
+	                            <Item dataField="premiumReceived" />                   
+	                            <Item dataField="coverAdjusted" />                   
+	                            <Item dataField="borderauxExRate" />                   
+	                            <Item dataField="lapseDate" />                   
+	                            <Item dataField="coverRenewalDate" />                   
+	                            <Item dataField="annualPremium" />                   
+	                            <Item dataField="potentialCoverAmount" />                   
+	                            <Item dataField="cumulativeCoverAmount" />                   
 	                                   
                 </Form>
             </DataTable>

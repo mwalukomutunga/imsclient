@@ -6,9 +6,9 @@ import DataTable from "../components/Table";
 import { Item } from 'devextreme-react/form';
 import { Form } from 'devextreme-react/data-grid';
 import requests from '../agent';
-const page = "/Currencies";
+const page = "/Currencies/";
 
-const columns = ['id','currencyCode','currencyName','active','countryID'];
+const columns = ['id','currencyCode','currencyName','currPrec','active'];
 
 const Currency = () => {
     const [data, setData] = useState([]);
@@ -38,10 +38,10 @@ const Currency = () => {
                 width={800}
                 height={550} >
                 <Form colCount={2}>
-                             <Item dataField="CurrencyCode" />                   
-	                            <Item dataField="CurrencyName" />                   
-	                            <Item dataField="Active" />                   
-	                            <Item dataField="CountryID" />                   
+                             <Item dataField="currencyCode" />                   
+	                            <Item dataField="currencyName" />                   
+	                            <Item dataField="currPrec" />                   
+	                            <Item dataField="active" />                   
 	                                   
                 </Form>
             </DataTable>

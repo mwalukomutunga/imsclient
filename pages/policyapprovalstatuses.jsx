@@ -6,7 +6,7 @@ import DataTable from "../components/Table";
 import { Item } from 'devextreme-react/form';
 import { Form } from 'devextreme-react/data-grid';
 import requests from '../agent';
-const page = "/PolicyApprovalStatuses";
+const page = "/PolicyApprovalStatuses/";
 
 const columns = ['id','state'];
 
@@ -38,7 +38,7 @@ const PolicyApprovalStatus = () => {
                 width={800}
                 height={550} >
                 <Form colCount={2}>
-                             <Item dataField="State" />                   
+                             <Item dataField="state" />                   
 	                                   
                 </Form>
             </DataTable>

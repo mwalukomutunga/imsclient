@@ -63,6 +63,26 @@ const SideBar = (props) => {
                                 </a>
                             </div>
                             <div className="menu-item">
+                                <a href="/exchangerates" className="menu-link">
+                                    <div className="menu-text">Exchange Rates</div>
+                                </a>
+                            </div>
+                            <div className="menu-item">
+                                <a href="/banks" className="menu-link">
+                                    <div className="menu-text">Banks</div>
+                                </a>
+                            </div>
+                            <div className="menu-item">
+                                <a href="/bankbranches" className="menu-link">
+                                    <div className="menu-text">Bank Branches</div>
+                                </a>
+                            </div>
+                            <div className="menu-item">
+                                <a href="/bankaccounts" className="menu-link">
+                                    <div className="menu-text">Bank Accounts</div>
+                                </a>
+                            </div>
+                            <div className="menu-item">
                                 <a href="/members" className="menu-link">
                                     <div className="menu-text">Members</div>
                                 </a>

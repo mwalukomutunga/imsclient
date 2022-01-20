@@ -6,9 +6,9 @@ import DataTable from "../components/Table";
 import { Item } from 'devextreme-react/form';
 import { Form } from 'devextreme-react/data-grid';
 import requests from '../agent';
-const page = "/Benefits";
+const page = "/Benefits/";
 
-const columns = ['id','benefitID','name','description','category','benefitClass','productType'];
+const columns = ['id','name','description','category','benefitClass','productType'];
 
 const Benefit = () => {
     const [data, setData] = useState([]);
@@ -38,12 +38,11 @@ const Benefit = () => {
                 width={800}
                 height={550} >
                 <Form colCount={2}>
-                             <Item dataField="BenefitID" />                   
-	                            <Item dataField="Name" />                   
-	                            <Item dataField="Description" />                   
-	                            <Item dataField="Category" />                   
-	                            <Item dataField="BenefitClass" />                   
-	                            <Item dataField="ProductType" />                   
+                             <Item dataField="name" />                   
+	                            <Item dataField="description" />                   
+	                            <Item dataField="category" />                   
+	                            <Item dataField="benefitClass" />                   
+	                            <Item dataField="productType" />                   
 	                                   
                 </Form>
             </DataTable>

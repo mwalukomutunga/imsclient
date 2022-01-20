@@ -6,7 +6,7 @@ import DataTable from "../components/Table";
 import { Item } from 'devextreme-react/form';
 import { Form } from 'devextreme-react/data-grid';
 import requests from '../agent';
-const page = "/Jurisdiction_BusinessPolicies";
+const page = "/Jurisdiction_BusinessPolicies/";
 
 const columns = ['id','jurisdictionID','vAT','taxOnGDPW','taxOnUMFee','reInsurerTax','minReInsurerQuotaShare','nonResidentTax','dateFrom','dateTo'];
 
@@ -38,15 +38,15 @@ const JurisdictionBusinessPolicies = () => {
                 width={800}
                 height={550} >
                 <Form colCount={2}>
-                             <Item dataField="JurisdictionID" />                   
-	                            <Item dataField="VAT" />                   
-	                            <Item dataField="TaxOnGDPW" />                   
-	                            <Item dataField="TaxOnUMFee" />                   
-	                            <Item dataField="ReInsurerTax" />                   
-	                            <Item dataField="MinReInsurerQuotaShare" />                   
-	                            <Item dataField="NonResidentTax" />                   
-	                            <Item dataField="DateFrom" />                   
-	                            <Item dataField="DateTo" />                   
+                             <Item dataField="jurisdictionID" />                   
+	                            <Item dataField="vAT" />                   
+	                            <Item dataField="taxOnGDPW" />                   
+	                            <Item dataField="taxOnUMFee" />                   
+	                            <Item dataField="reInsurerTax" />                   
+	                            <Item dataField="minReInsurerQuotaShare" />                   
+	                            <Item dataField="nonResidentTax" />                   
+	                            <Item dataField="dateFrom" />                   
+	                            <Item dataField="dateTo" />                   
 	                                   
                 </Form>
             </DataTable>

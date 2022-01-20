@@ -6,7 +6,7 @@ import DataTable from "../components/Table";
 import { Item } from 'devextreme-react/form';
 import { Form } from 'devextreme-react/data-grid';
 import requests from '../agent';
-const page = "/PolicySerialNumberAllocationLogs";
+const page = "/PolicySerialNumberAllocationLogs/";
 
 const columns = ['id','policyNumber','issued'];
 
@@ -38,8 +38,8 @@ const PolicySerialNumberAllocationLog = () => {
                 width={800}
                 height={550} >
                 <Form colCount={2}>
-                             <Item dataField="PolicyNumber" />                   
-	                            <Item dataField="Issued" />                   
+                             <Item dataField="policyNumber" />                   
+	                            <Item dataField="issued" />                   
 	                                   
                 </Form>
             </DataTable>

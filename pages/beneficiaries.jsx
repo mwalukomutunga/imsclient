@@ -6,9 +6,9 @@ import DataTable from "../components/Table";
 import { Item } from 'devextreme-react/form';
 import { Form } from 'devextreme-react/data-grid';
 import requests from '../agent';
-const page = "/Beneficiaries";
+const page = "/Beneficiaries/";
 
-const columns = ['id','memberNo','benefNo','dependName','postalAddress','physicalAddress','telephone','email','iDNo','relationship','photo','portion','country','bank','branch','accNo','accName'];
+const columns = ['id','memberNo','benefNo','dependName','postalAddress','physicalAddress','telephone','email','iDNo','relationship','photo','portion','country','bankAccountId'];
 
 const Beneficiaries = () => {
     const [data, setData] = useState([]);
@@ -38,22 +38,19 @@ const Beneficiaries = () => {
                 width={800}
                 height={550} >
                 <Form colCount={2}>
-                             <Item dataField="MemberNo" />                   
-	                            <Item dataField="BenefNo" />                   
-	                            <Item dataField="DependName" />                   
-	                            <Item dataField="PostalAddress" />                   
-	                            <Item dataField="PhysicalAddress" />                   
-	                            <Item dataField="Telephone" />                   
-	                            <Item dataField="Email" />                   
-	                            <Item dataField="IDNo" />                   
-	                            <Item dataField="Relationship" />                   
-	                            <Item dataField="Photo" />                   
-	                            <Item dataField="Portion" />                   
-	                            <Item dataField="Country" />                   
-	                            <Item dataField="Bank" />                   
-	                            <Item dataField="Branch" />                   
-	                            <Item dataField="AccNo" />                   
-	                            <Item dataField="AccName" />                   
+                             <Item dataField="memberNo" />                   
+	                            <Item dataField="benefNo" />                   
+	                            <Item dataField="dependName" />                   
+	                            <Item dataField="postalAddress" />                   
+	                            <Item dataField="physicalAddress" />                   
+	                            <Item dataField="telephone" />                   
+	                            <Item dataField="email" />                   
+	                            <Item dataField="iDNo" />                   
+	                            <Item dataField="relationship" />                   
+	                            <Item dataField="photo" />                   
+	                            <Item dataField="portion" />                   
+	                            <Item dataField="country" />                   
+	                            <Item dataField="bankAccountId" />                   
 	                                   
                 </Form>
             </DataTable>

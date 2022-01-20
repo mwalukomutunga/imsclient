@@ -6,9 +6,9 @@ import DataTable from "../components/Table";
 import { Item } from 'devextreme-react/form';
 import { Form } from 'devextreme-react/data-grid';
 import requests from '../agent';
-const page = "/Brokers";
+const page = "/Brokers/";
 
-const columns = ['id','title','name','address','postalCode','mobilePhone','email','bankName','bankLocationCountry','bankBranchCode','bankAccountName','bankAccountNo','bankCity'];
+const columns = ['id','title','name','address','postalCode','mobilePhone','email','bankAccountId'];
 
 const Broker = () => {
     const [data, setData] = useState([]);
@@ -38,18 +38,13 @@ const Broker = () => {
                 width={800}
                 height={550} >
                 <Form colCount={2}>
-                             <Item dataField="Title" />                   
-	                            <Item dataField="Name" />                   
-	                            <Item dataField="Address" />                   
-	                            <Item dataField="PostalCode" />                   
-	                            <Item dataField="MobilePhone" />                   
-	                            <Item dataField="Email" />                   
-	                            <Item dataField="BankName" />                   
-	                            <Item dataField="BankLocationCountry" />                   
-	                            <Item dataField="BankBranchCode" />                   
-	                            <Item dataField="BankAccountName" />                   
-	                            <Item dataField="BankAccountNo" />                   
-	                            <Item dataField="BankCity" />                   
+                             <Item dataField="title" />                   
+	                            <Item dataField="name" />                   
+	                            <Item dataField="address" />                   
+	                            <Item dataField="postalCode" />                   
+	                            <Item dataField="mobilePhone" />                   
+	                            <Item dataField="email" />                   
+	                            <Item dataField="bankAccountId" />                   
 	                                   
                 </Form>
             </DataTable>

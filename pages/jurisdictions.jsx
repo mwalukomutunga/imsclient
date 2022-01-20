@@ -6,9 +6,9 @@ import DataTable from "../components/Table";
 import { Item } from 'devextreme-react/form';
 import { Form } from 'devextreme-react/data-grid';
 import requests from '../agent';
-const page = "/Jurisdictions";
+const page = "/Jurisdictions/";
 
-const columns = ['id','jurisdictionID','jurisdictionName','jurisdictionCode','countryID','currencyID','bankName','bankLocationCountry','bankCity','bankBranchCode','bankAccountName','bankAccountNo','vATBankCity','vATBankName','vATBankLocation','vATBankBranchCode','vATBankAccountName','vATBankAccountNo','gMTTimeOffset','active','version','versionUpdated','localCurrencyID'];
+const columns = ['id','jurisdictionName','jurisdictionCode','countryId','currencyId','bankAccountId','vatBankAccountId','gMTTimeOffset','active','version','versionUpdated','localCurrencyId'];
 
 const Jurisdiction = () => {
     const [data, setData] = useState([]);
@@ -38,28 +38,17 @@ const Jurisdiction = () => {
                 width={800}
                 height={550} >
                 <Form colCount={2}>
-                             <Item dataField="JurisdictionID" />                   
-	                            <Item dataField="JurisdictionName" />                   
-	                            <Item dataField="JurisdictionCode" />                   
-	                            <Item dataField="CountryID" />                   
-	                            <Item dataField="CurrencyID" />                   
-	                            <Item dataField="BankName" />                   
-	                            <Item dataField="BankLocationCountry" />                   
-	                            <Item dataField="BankCity" />                   
-	                            <Item dataField="BankBranchCode" />                   
-	                            <Item dataField="BankAccountName" />                   
-	                            <Item dataField="BankAccountNo" />                   
-	                            <Item dataField="VATBankCity" />                   
-	                            <Item dataField="VATBankName" />                   
-	                            <Item dataField="VATBankLocation" />                   
-	                            <Item dataField="VATBankBranchCode" />                   
-	                            <Item dataField="VATBankAccountName" />                   
-	                            <Item dataField="VATBankAccountNo" />                   
-	                            <Item dataField="GMTTimeOffset" />                   
-	                            <Item dataField="Active" />                   
-	                            <Item dataField="Version" />                   
-	                            <Item dataField="VersionUpdated" />                   
-	                            <Item dataField="LocalCurrencyID" />                   
+                             <Item dataField="jurisdictionName" />                   
+	                            <Item dataField="jurisdictionCode" />                   
+	                            <Item dataField="countryId" />                   
+	                            <Item dataField="currencyId" />                   
+	                            <Item dataField="bankAccountId" />                   
+	                            <Item dataField="vatBankAccountId" />                   
+	                            <Item dataField="gMTTimeOffset" />                   
+	                            <Item dataField="active" />                   
+	                            <Item dataField="version" />                   
+	                            <Item dataField="versionUpdated" />                   
+	                            <Item dataField="localCurrencyId" />                   
 	                                   
                 </Form>
             </DataTable>

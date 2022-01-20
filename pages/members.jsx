@@ -6,9 +6,9 @@ import DataTable from "../components/Table";
 import { Item } from 'devextreme-react/form';
 import { Form } from 'devextreme-react/data-grid';
 import requests from '../agent';
-const page = "/Members";
+const page = "/Members/";
 
-const columns = ['id','title','firstNAme','middleName','lastName','fullName','address','town','postalCode','cellPhone','relationShip','payrollNo','taxId','annualIncome','identityDocument','dOB','email','ocupation'];
+const columns = ['id','jurisdictionId','title','firstNAme','middleName','lastName','fullName','address','town','postalCode','cellPhone','relationShip','payrollNo','taxId','annualIncome','identityDocument','dOB','email','ocupation'];
 
 const Member = () => {
     const [data, setData] = useState([]);
@@ -38,23 +38,24 @@ const Member = () => {
                 width={800}
                 height={550} >
                 <Form colCount={2}>
-                             <Item dataField="Title" />                   
-	                            <Item dataField="FirstNAme" />                   
-	                            <Item dataField="MiddleName" />                   
-	                            <Item dataField="LastName" />                   
-	                            <Item dataField="FullName" />                   
-	                            <Item dataField="Address" />                   
-	                            <Item dataField="Town" />                   
-	                            <Item dataField="PostalCode" />                   
-	                            <Item dataField="CellPhone" />                   
-	                            <Item dataField="RelationShip" />                   
-	                            <Item dataField="PayrollNo" />                   
-	                            <Item dataField="TaxId" />                   
-	                            <Item dataField="AnnualIncome" />                   
-	                            <Item dataField="IdentityDocument" />                   
-	                            <Item dataField="DOB" />                   
-	                            <Item dataField="Email" />                   
-	                            <Item dataField="Ocupation" />                   
+                             <Item dataField="jurisdictionId" />                   
+	                            <Item dataField="title" />                   
+	                            <Item dataField="firstNAme" />                   
+	                            <Item dataField="middleName" />                   
+	                            <Item dataField="lastName" />                   
+	                            <Item dataField="fullName" />                   
+	                            <Item dataField="address" />                   
+	                            <Item dataField="town" />                   
+	                            <Item dataField="postalCode" />                   
+	                            <Item dataField="cellPhone" />                   
+	                            <Item dataField="relationShip" />                   
+	                            <Item dataField="payrollNo" />                   
+	                            <Item dataField="taxId" />                   
+	                            <Item dataField="annualIncome" />                   
+	                            <Item dataField="identityDocument" />                   
+	                            <Item dataField="dOB" />                   
+	                            <Item dataField="email" />                   
+	                            <Item dataField="ocupation" />                   
 	                                   
                 </Form>
             </DataTable>

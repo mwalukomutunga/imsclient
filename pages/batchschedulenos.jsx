@@ -6,7 +6,7 @@ import DataTable from "../components/Table";
 import { Item } from 'devextreme-react/form';
 import { Form } from 'devextreme-react/data-grid';
 import requests from '../agent';
-const page = "/BatchScheduleNos";
+const page = "/BatchScheduleNos/";
 
 const columns = ['id','jurisdictionID','reinsurerId','numberOfSchedules','batchStartDate'];
 
@@ -38,10 +38,10 @@ const BatchScheduleNo = () => {
                 width={800}
                 height={550} >
                 <Form colCount={2}>
-                             <Item dataField="JurisdictionID" />                   
-	                            <Item dataField="ReinsurerId" />                   
-	                            <Item dataField="NumberOfSchedules" />                   
-	                            <Item dataField="BatchStartDate" />                   
+                             <Item dataField="jurisdictionID" />                   
+	                            <Item dataField="reinsurerId" />                   
+	                            <Item dataField="numberOfSchedules" />                   
+	                            <Item dataField="batchStartDate" />                   
 	                                   
                 </Form>
             </DataTable>

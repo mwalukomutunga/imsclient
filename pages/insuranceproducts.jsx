@@ -6,9 +6,9 @@ import DataTable from "../components/Table";
 import { Item } from 'devextreme-react/form';
 import { Form } from 'devextreme-react/data-grid';
 import requests from '../agent';
-const page = "/InsuranceProducts";
+const page = "/InsuranceProducts/";
 
-const columns = ['id','productID','priority','code','description','shortDescription','printDescription','textEndorsement','textPermanent','productType','companyID','isScheme'];
+const columns = ['id','jurisdictionId','code','description','shortDescription','priority','printDescription','textEndorsement','textPermanent','productType','companyId','benefitId','isScheme'];
 
 const InsuranceProduct = () => {
     const [data, setData] = useState([]);
@@ -38,17 +38,18 @@ const InsuranceProduct = () => {
                 width={800}
                 height={550} >
                 <Form colCount={2}>
-                             <Item dataField="ProductID" />                   
-	                            <Item dataField="Priority" />                   
-	                            <Item dataField="Code" />                   
-	                            <Item dataField="Description" />                   
-	                            <Item dataField="ShortDescription" />                   
-	                            <Item dataField="PrintDescription" />                   
-	                            <Item dataField="TextEndorsement" />                   
-	                            <Item dataField="TextPermanent" />                   
-	                            <Item dataField="ProductType" />                   
-	                            <Item dataField="CompanyID" />                   
-	                            <Item dataField="IsScheme" />                   
+                             <Item dataField="jurisdictionId" />                   
+	                            <Item dataField="code" />                   
+	                            <Item dataField="description" />                   
+	                            <Item dataField="shortDescription" />                   
+	                            <Item dataField="priority" />                   
+	                            <Item dataField="printDescription" />                   
+	                            <Item dataField="textEndorsement" />                   
+	                            <Item dataField="textPermanent" />                   
+	                            <Item dataField="productType" />                   
+	                            <Item dataField="companyId" />                   
+	                            <Item dataField="benefitId" />                   
+	                            <Item dataField="isScheme" />                   
 	                                   
                 </Form>
             </DataTable>

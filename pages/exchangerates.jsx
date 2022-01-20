@@ -6,11 +6,11 @@ import DataTable from "../components/Table";
 import { Item } from 'devextreme-react/form';
 import { Form } from 'devextreme-react/data-grid';
 import requests from '../agent';
-const page = "/Invoice_States/";
+const page = "/ExchangeRates/";
 
-const columns = ['id','state'];
+const columns = ['id','fromCurr','toCurr','multiplier','divisor','effectiveDate','remarks'];
 
-const InvoiceStates = () => {
+const ExchangeRates = () => {
     const [data, setData] = useState([]);
     useEffect(() => {
         requests.get(page).then(response => {
@@ -29,16 +29,21 @@ const InvoiceStates = () => {
     }
 
     return (
-        <Content Page="Invoice States">
+        <Content Page="Exchange Rates">
             <DataTable columns={columns} dataSource={data}
-                title="Invoice States"
+                title="Exchange Rates"
                 handlesave={handleSave}
                 handleDelete={handleDelete}
                 handleUpdate={handleUpdate}
                 width={800}
                 height={550} >
                 <Form colCount={2}>
-                             <Item dataField="state" />                   
+                             <Item dataField="fromCurr" />                   
+	                            <Item dataField="toCurr" />                   
+	                            <Item dataField="multiplier" />                   
+	                            <Item dataField="divisor" />                   
+	                            <Item dataField="effectiveDate" />                   
+	                            <Item dataField="remarks" />                   
 	                                   
                 </Form>
             </DataTable>
@@ -47,5 +52,5 @@ const InvoiceStates = () => {
     );
 }
 
-export default InvoiceStates;
+export default ExchangeRates;
 

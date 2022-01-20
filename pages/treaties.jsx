@@ -6,9 +6,9 @@ import DataTable from "../components/Table";
 import { Item } from 'devextreme-react/form';
 import { Form } from 'devextreme-react/data-grid';
 import requests from '../agent';
-const page = "/Treaties";
+const page = "/Treaties/";
 
-const columns = ['id','treatyID','oldTreatyNo','name','code','group','description','line','startDate','endDate','currency','limit','retention','cashLoss','ethQCommissionPct','oldCode','insurerId','treatyGroupID'];
+const columns = ['id','oldTreatyNo','code','name','description','line','startDate','endDate','currency','limit','retention','cashLoss','ethQCommissionPct','oldCode','insurerId','treatyGroupID'];
 
 const Treaty = () => {
     const [data, setData] = useState([]);
@@ -38,23 +38,21 @@ const Treaty = () => {
                 width={800}
                 height={550} >
                 <Form colCount={2}>
-                             <Item dataField="TreatyID" />                   
-	                            <Item dataField="OldTreatyNo" />                   
-	                            <Item dataField="Name" />                   
-	                            <Item dataField="Code" />                   
-	                            <Item dataField="Group" />                   
-	                            <Item dataField="Description" />                   
-	                            <Item dataField="Line" />                   
-	                            <Item dataField="StartDate" />                   
-	                            <Item dataField="EndDate" />                   
-	                            <Item dataField="Currency" />                   
-	                            <Item dataField="Limit" />                   
-	                            <Item dataField="Retention" />                   
-	                            <Item dataField="CashLoss" />                   
-	                            <Item dataField="EthQCommissionPct" />                   
-	                            <Item dataField="OldCode" />                   
-	                            <Item dataField="InsurerId" />                   
-	                            <Item dataField="TreatyGroupID" />                   
+                             <Item dataField="oldTreatyNo" />                   
+	                            <Item dataField="code" />                   
+	                            <Item dataField="name" />                   
+	                            <Item dataField="description" />                   
+	                            <Item dataField="line" />                   
+	                            <Item dataField="startDate" />                   
+	                            <Item dataField="endDate" />                   
+	                            <Item dataField="currency" />                   
+	                            <Item dataField="limit" />                   
+	                            <Item dataField="retention" />                   
+	                            <Item dataField="cashLoss" />                   
+	                            <Item dataField="ethQCommissionPct" />                   
+	                            <Item dataField="oldCode" />                   
+	                            <Item dataField="insurerId" />                   
+	                            <Item dataField="treatyGroupID" />                   
 	                                   
                 </Form>
             </DataTable>

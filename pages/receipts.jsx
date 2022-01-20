@@ -6,7 +6,7 @@ import DataTable from "../components/Table";
 import { Item } from 'devextreme-react/form';
 import { Form } from 'devextreme-react/data-grid';
 import requests from '../agent';
-const page = "/Receipts";
+const page = "/Receipts/";
 
 const columns = ['id','countryID','jurisdictionID','schemeID','insurerID','scheduleID','invoiceDate','paymentDate','paymentReconciled','amountReconciled','totalOutstanding','vAT','memberCount','totalPremium','totalCover','reminder','formalInvoice','statusID','archivePolicyNo','needsToFillIn','signedBy','approved','paid','receiptDate','invoiceNo'];
 
@@ -38,30 +38,30 @@ const Receipts = () => {
                 width={800}
                 height={550} >
                 <Form colCount={2}>
-                             <Item dataField="CountryID" />                   
-	                            <Item dataField="JurisdictionID" />                   
-	                            <Item dataField="SchemeID" />                   
-	                            <Item dataField="InsurerID" />                   
-	                            <Item dataField="ScheduleID" />                   
-	                            <Item dataField="InvoiceDate" />                   
-	                            <Item dataField="PaymentDate" />                   
-	                            <Item dataField="PaymentReconciled" />                   
-	                            <Item dataField="AmountReconciled" />                   
-	                            <Item dataField="TotalOutstanding" />                   
-	                            <Item dataField="VAT" />                   
-	                            <Item dataField="MemberCount" />                   
-	                            <Item dataField="TotalPremium" />                   
-	                            <Item dataField="TotalCover" />                   
-	                            <Item dataField="Reminder" />                   
-	                            <Item dataField="FormalInvoice" />                   
-	                            <Item dataField="StatusID" />                   
-	                            <Item dataField="ArchivePolicyNo" />                   
-	                            <Item dataField="NeedsToFillIn" />                   
-	                            <Item dataField="SignedBy" />                   
-	                            <Item dataField="Approved" />                   
-	                            <Item dataField="Paid" />                   
-	                            <Item dataField="ReceiptDate" />                   
-	                            <Item dataField="InvoiceNo" />                   
+                             <Item dataField="countryID" />                   
+	                            <Item dataField="jurisdictionID" />                   
+	                            <Item dataField="schemeID" />                   
+	                            <Item dataField="insurerID" />                   
+	                            <Item dataField="scheduleID" />                   
+	                            <Item dataField="invoiceDate" />                   
+	                            <Item dataField="paymentDate" />                   
+	                            <Item dataField="paymentReconciled" />                   
+	                            <Item dataField="amountReconciled" />                   
+	                            <Item dataField="totalOutstanding" />                   
+	                            <Item dataField="vAT" />                   
+	                            <Item dataField="memberCount" />                   
+	                            <Item dataField="totalPremium" />                   
+	                            <Item dataField="totalCover" />                   
+	                            <Item dataField="reminder" />                   
+	                            <Item dataField="formalInvoice" />                   
+	                            <Item dataField="statusID" />                   
+	                            <Item dataField="archivePolicyNo" />                   
+	                            <Item dataField="needsToFillIn" />                   
+	                            <Item dataField="signedBy" />                   
+	                            <Item dataField="approved" />                   
+	                            <Item dataField="paid" />                   
+	                            <Item dataField="receiptDate" />                   
+	                            <Item dataField="invoiceNo" />                   
 	                                   
                 </Form>
             </DataTable>

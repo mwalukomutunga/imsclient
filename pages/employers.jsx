@@ -6,9 +6,9 @@ import DataTable from "../components/Table";
 import { Item } from 'devextreme-react/form';
 import { Form } from 'devextreme-react/data-grid';
 import requests from '../agent';
-const page = "/Employers";
+const page = "/Employers/";
 
-const columns = ['id','name','payrollNo','address','postalCode','mobilePhone','email','bankName'];
+const columns = ['id','name','payrollNo','address','postalCode','mobilePhone','email','bankAccountId'];
 
 const Employer = () => {
     const [data, setData] = useState([]);
@@ -38,13 +38,13 @@ const Employer = () => {
                 width={800}
                 height={550} >
                 <Form colCount={2}>
-                             <Item dataField="Name" />                   
-	                            <Item dataField="PayrollNo" />                   
-	                            <Item dataField="Address" />                   
-	                            <Item dataField="PostalCode" />                   
-	                            <Item dataField="MobilePhone" />                   
-	                            <Item dataField="Email" />                   
-	                            <Item dataField="BankName" />                   
+                             <Item dataField="name" />                   
+	                            <Item dataField="payrollNo" />                   
+	                            <Item dataField="address" />                   
+	                            <Item dataField="postalCode" />                   
+	                            <Item dataField="mobilePhone" />                   
+	                            <Item dataField="email" />                   
+	                            <Item dataField="bankAccountId" />                   
 	                                   
                 </Form>
             </DataTable>
